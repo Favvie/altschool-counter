@@ -37,6 +37,9 @@
 .notfoundTitle {
   text-align: center;
 }
+.notfoundBtn:hover {
+  cursor: pointer;
+}
 .notfoundBtn {
   width: 50%;
   max-width: 300px;
