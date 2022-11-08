@@ -6,7 +6,7 @@ const Navigation = () => {
       <a href="/">Hook</a>
       <a href="/reducercounter">Reducer</a>
       <a href="/404">404</a>
-      <a href="">Error Boundary</a>
+      <a href="/error">Error Boundary</a>
     </nav>
   );
 };
