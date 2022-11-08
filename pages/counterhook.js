@@ -22,47 +22,50 @@ const CounterHook = () => {
           name="description"
           content="A counter page that use a custom useCounter hook to do a counter."
         />
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <h1 className={styles.title}>Welcome to the custom counter hook</h1>
       <main className={styles.main}>
-        <div>
+        <h1 className={styles.title}>Custom hook</h1>
+
+        <button
+          onClick={reset}
+          className={styles.reset}
+          aria-label="Reset Value"
+        >
+          <GrRevert /> Reset Value
+        </button>
+        <section className={styles.section}>
           <button
-            onClick={reset}
-            className={styles.reset}
-            aria-label="Reset Value"
+            onClick={increment}
+            className={styles.buttonIncrease}
+            aria-label="increase Value"
           >
-            <GrRevert /> Reset Value
+            <AiOutlinePlus size="20px" />
           </button>
-          <section className={styles.section}>
-            <button
-              onClick={increment}
-              className={styles.buttonIncrease}
-              aria-label="increase Value"
-            >
-              <AiOutlinePlus size={30} />
-            </button>
-            <p className={styles.countvalue}>{count}</p>
-            <button
-              onClick={decrement}
-              className={styles.buttonDecrease}
-              aria-label="decrease Value"
-            >
-              <AiOutlineMinus size={30} />
-            </button>
-          </section>
-          <form className={styles.form}>
-            <input
-              type="text"
-              ref={inputEl}
-              className={styles.input}
-              aria-label="input value"
-            />
-            <button onClick={addValue} className={styles.buttonValue}>
-              set Value
-            </button>
-          </form>
-        </div>
+          <p className={styles.countvalue}>{count}</p>
+          <button
+            onClick={decrement}
+            className={styles.buttonDecrease}
+            aria-label="decrease Value"
+          >
+            <AiOutlineMinus size={30} />
+          </button>
+        </section>
+        <form className={styles.form}>
+          <input
+            type="text"
+            ref={inputEl}
+            className={styles.input}
+            aria-label="input value"
+          />
+          <button onClick={addValue} className={styles.buttonValue}>
+            set Value
+          </button>
+        </form>
+        {/* </div> */}
       </main>
     </div>
   );
